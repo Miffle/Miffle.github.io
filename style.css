@@ -9,6 +9,7 @@ body {
 	max-width: 390px;
 }
 p{
+	margin: 5px;
 	font-weight: bold;
 }
 .inner {
