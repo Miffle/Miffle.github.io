@@ -14,7 +14,7 @@ p{
 .inner {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 230px 230px 230px;
+	grid-template-rows: 250px 250px 250px;
 }
 
 .img {
