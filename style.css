@@ -2,8 +2,10 @@ body {
     margin: 0;
     padding: 0;
     font-size: 18px;
-	color: #fff;
-	background: #282828;
+	/*color: #fff;*/
+	/*background: #282828;*/
+	color: var(--tg-theme-text-color);
+	background: var(--tg-theme-bg-color);
 }
 .container {
 	max-width: 390px;
@@ -11,6 +13,7 @@ body {
 .inner{
 	display: grid;
 	grid-template-columns: 1fr;
+	position: center;
 }
 p{
 	margin: 5px;
@@ -73,3 +76,9 @@ h2{
 	font-weight: 700;
 	transition: background .2s linear;
 }
+/*var(--tg-theme-bg-color)
+var(--tg-theme-text-color)
+var(--tg-theme-hint-color)
+var(--tg-theme-link-color)
+var(--tg-theme-button-color)
+var(--tg-theme-button-text-color)*/
