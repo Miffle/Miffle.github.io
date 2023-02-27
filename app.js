@@ -83,7 +83,7 @@ btn6.addEventListener("click", function () {
     item6 += 1;
     tg.MainButton.setText("Купить!");
     lable6.innerText = `Кол-во: ${item6}`
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 
@@ -94,7 +94,7 @@ min_btn1.addEventListener('click', function () {
         item1 -= 1;
         lable1.innerText = `Кол-во: ${item1}`
     }
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 })
@@ -103,7 +103,7 @@ min_btn2.addEventListener('click', function () {
         item2 -= 1;
         lable2.innerText = `Кол-во: ${item2}`
     }
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 })
@@ -112,7 +112,7 @@ min_btn3.addEventListener('click', function () {
         item3 -= 1;
         lable3.innerText = `Кол-во: ${item3}`
     }
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 })
@@ -121,7 +121,7 @@ min_btn4.addEventListener('click', function () {
         item4 -= 1;
         lable4.innerText = `Кол-во: ${item4}`
     }
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 })
@@ -130,7 +130,7 @@ min_btn5.addEventListener('click', function () {
         item5 -= 1;
         lable5.innerText = `Кол-во: ${item5}`
     }
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 })
@@ -139,7 +139,7 @@ min_btn6.addEventListener('click', function () {
         item6 -= 1;
         lable6.innerText = `Кол-во: ${item6}`
     }
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 })
