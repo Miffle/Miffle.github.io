@@ -4,7 +4,6 @@ tg.expand();
 
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
-tg.MainButton.setText("Купить!").hide();
 let first_light_price = 500;
 let second_light_price = 500;
 let third_light_price = 500;
@@ -52,6 +51,7 @@ function MainButtonShow(cost) {
         tg.MainButton.show();
     }
 }
+
 function SetText(text, item, cost) {
     text.innerText = `${item} шт / Цена ${cost}`;
 }
@@ -109,7 +109,7 @@ min_btn1.addEventListener('click', function () {
         item1 -= 1;
         cost_item1 = first_light_price * item1;
         SetText(lable1, item1, cost_item1);
-        MainButtonShow(first_light_price*(-1));
+        MainButtonShow(first_light_price * (-1));
     }
 
 })
@@ -118,7 +118,7 @@ min_btn2.addEventListener('click', function () {
         item2 -= 1;
         cost_item2 = second_light_price * item2;
         SetText(lable2, item2, cost_item2);
-        MainButtonShow(second_light_price*(-1));
+        MainButtonShow(second_light_price * (-1));
     }
 
 })
@@ -127,7 +127,7 @@ min_btn3.addEventListener('click', function () {
         item3 -= 1;
         cost_item3 = third_light_price * item3;
         SetText(lable3, item3, cost_item3);
-        MainButtonShow(third_light_price*(-1));
+        MainButtonShow(third_light_price * (-1));
     }
 
 })
@@ -136,7 +136,7 @@ min_btn4.addEventListener('click', function () {
         item4 -= 1;
         cost_item4 = fourth_light_price * item4;
         SetText(lable4, item4, cost_item4);
-        MainButtonShow(fourth_light_price*(-1));
+        MainButtonShow(fourth_light_price * (-1));
     }
 
 })
@@ -145,7 +145,7 @@ min_btn5.addEventListener('click', function () {
         item5 -= 1;
         cost_item5 = fifth_light_price * item5;
         SetText(lable5, item5, cost_item5);
-        MainButtonShow(fifth_light_price*(-1));
+        MainButtonShow(fifth_light_price * (-1));
     }
 
 })
@@ -154,13 +154,25 @@ min_btn6.addEventListener('click', function () {
         item6 -= 1;
         cost_item6 = sixth_light_price * item6;
         SetText(lable6, item6, cost_item6);
-        MainButtonShow(sixth_light_price*(-1));
+        MainButtonShow(sixth_light_price * (-1));
     }
 
 })
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    items.push(`Свеч №1 - ${item1}`, `Свеч №2 - ${item2}`, `Свеч №3 - ${item3}`, `Свеч №4 - ${item4}`, `Свеч №5 - ${item5}`, `Свеч №6 - ${item6}`)
-    items.push(`Общая сумма = ${item1 * 500 + item2 * 500 + item3 * 500 + item4 * 500 + item5 * 500 + item6 * 500}`);
+    if (item1 !== 0) {
+        items.push(`Свеч №1 - ${item1}`)
+    } else if (item2 !== 0) {
+         items.push(`Свеч №2 - ${item2}`)
+    }else if(item3 !== 0){
+         items.push(`Свеч №3 - ${item3}`)
+    }else if(item4 !== 0){
+         items.push(`Свеч №4 - ${item4}`)
+    }else if(item5 !== 0){
+        items.push(`Свеч №5 - ${item5}`)
+    }else if(item6 !== 0){
+        items.push(`Свеч №6 - ${item6}`)
+    }
+    items.push(`Общая сумма = ${totalCost}`);
     tg.sendData(items);
 });
