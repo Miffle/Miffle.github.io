@@ -47,9 +47,8 @@ let lable6 = document.getElementById("count6");
 
 function MainButtonShow(cost) {
     totalCost += cost;
+    tg.MainButton.setText(`Купить! ${totalCost} ₽`)
     if (tg.MainButton.isVisible !== true) {
-
-        tg.MainButton.setText(`Купить! ${totalCost} ₽`)
         tg.MainButton.show();
     }
 }
