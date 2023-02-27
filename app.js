@@ -4,7 +4,7 @@ tg.expand();
 
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
-
+tg.MainButton.setText("Купить!").hide();
 let items = [];
 let item1 = 0
 let item2 = 0
@@ -12,6 +12,12 @@ let item3 = 0
 let item4 = 0
 let item5 = 0
 let item6 = 0
+let cost_item1 = 0
+let cost_item2 = 0
+let cost_item3 = 0
+let cost_item4 = 0
+let cost_item5 = 0
+let cost_item6 = 0
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
 let btn3 = document.getElementById("btn3");
@@ -30,121 +36,132 @@ let lable3 = document.getElementById("count3");
 let lable4 = document.getElementById("count4");
 let lable5 = document.getElementById("count5");
 let lable6 = document.getElementById("count6");
-btn1.addEventListener("click", function () {
-    item1 += 1;
-    lable1.innerText = `Кол-во: ${item1}`
-    tg.MainButton.setText("Купить!");
+let clear = document.getElementById("clear_storage")
+
+function MainButtonShow() {
     if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
+}
+
+function ClearAll(item, cost, text) {
+    item = 0;
+    cost = 0;
+    text.innerText = "0 шт / Цена: 0"
+}
+
+function SetText(text, item, cost) {
+    text.innerText = `${item} шт / Цена ${cost}`;
+}
+
+btn1.addEventListener("click", function () {
+    item1 += 1;
+    cost_item1 = 500 * item1;
+    SetText(lable1, item1, cost_item1);
+    MainButtonShow();
 });
 
 btn2.addEventListener("click", function () {
     item2 += 1;
-    lable2.innerText = `Кол-во: ${item2}`
-    tg.MainButton.setText("Купить!");
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    cost_item2 = 500 * item2;
+    SetText(lable2, item2, cost_item2);
+    MainButtonShow();
 
 });
 
 btn3.addEventListener("click", function () {
     item3 += 1;
-    lable3.innerText = `Кол-во: ${item3}`
-    tg.MainButton.setText("Купить!");
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    cost_item3 = 500 * item3;
+    SetText(lable3, item3, cost_item3);
+    MainButtonShow();
 
 });
 
 btn4.addEventListener("click", function () {
     item4 += 1;
-    lable4.innerText = `Кол-во: ${item4}`
-    tg.MainButton.setText("Купить!");
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    cost_item4 = 500 * item4;
+    SetText(lable4, item4, cost_item4);
+    MainButtonShow();
 
 });
 
 btn5.addEventListener("click", function () {
     item5 += 1;
-    lable5.innerText = `Кол-во: ${item5}`
-    tg.MainButton.setText("Купить!");
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    cost_item5 = 500 * item5;
+    SetText(lable5, item5, cost_item5);
+
+    MainButtonShow();
 
 });
 
 btn6.addEventListener("click", function () {
     item6 += 1;
-    tg.MainButton.setText("Купить!");
-    lable6.innerText = `Кол-во: ${item6}`
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    cost_item6 = 500 * item6;
+    SetText(lable6, item6, cost_item6);
+    MainButtonShow();
 
 });
 
 min_btn1.addEventListener('click', function () {
     if (item1 >= 1) {
         item1 -= 1;
-        lable1.innerText = `Кол-во: ${item1}`
+        cost_item1 = 500 * item1;
+        SetText(lable1, item1, cost_item1);
     }
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    MainButtonShow();
 })
 min_btn2.addEventListener('click', function () {
     if (item2 >= 1) {
         item2 -= 1;
-        lable2.innerText = `Кол-во: ${item2}`
+        cost_item2 = 500 * item2;
+        SetText(lable2, item2, cost_item2);
     }
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    MainButtonShow();
 })
 min_btn3.addEventListener('click', function () {
     if (item3 >= 1) {
         item3 -= 1;
-        lable3.innerText = `Кол-во: ${item3}`
+        cost_item3 = 500 * item3;
+        SetText(lable3, item3, cost_item3);
     }
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    MainButtonShow();
 })
 min_btn4.addEventListener('click', function () {
     if (item4 >= 1) {
         item4 -= 1;
-        lable4.innerText = `Кол-во: ${item4}`
+        cost_item4 = 500 * item4;
+        SetText(lable4, item4, cost_item4);
     }
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    MainButtonShow();
 })
 min_btn5.addEventListener('click', function () {
     if (item5 >= 1) {
         item5 -= 1;
-        lable5.innerText = `Кол-во: ${item5}`
+        cost_item5 = 500 * item5;
+        SetText(lable5, item5, cost_item5);
     }
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    MainButtonShow();
 })
 min_btn6.addEventListener('click', function () {
     if (item6 >= 1) {
         item6 -= 1;
-        lable6.innerText = `Кол-во: ${item6}`
+        cost_item6 = 500 * item6;
+        SetText(lable6, item6, cost_item6);
     }
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
+    MainButtonShow();
+})
+clear.addEventListener("click", function () {
+
+    ClearAll(item1, cost_item1, lable1);
+    ClearAll(item2, cost_item2, lable2);
+    ClearAll(item3, cost_item3, lable3);
+    ClearAll(item4, cost_item4, lable4);
+    ClearAll(item5, cost_item5, lable5);
+    ClearAll(item6, cost_item6, lable6);
+
 })
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    items.push([`Свеч №1 - ${item1}`, `Свеч №2 - ${item2}`, `Свеч №3 - ${item3}`, `Свеч №4 - ${item4}`, `Свеч №5 - ${item5}`, `Свеч №6 - ${item6}`,])
+    items.push(`Свеч №1 - ${item1}`, `Свеч №2 - ${item2}`, `Свеч №3 - ${item3}`, `Свеч №4 - ${item4}`, `Свеч №5 - ${item5}`, `Свеч №6 - ${item6}`)
     items.push(`Общая сумма = ${item1 * 500 + item2 * 500 + item3 * 500 + item4 * 500 + item5 * 500 + item6 * 500}`);
     tg.sendData(items);
 });
