@@ -34,7 +34,7 @@ btn1.addEventListener("click", function () {
     item1 += 1;
     lable1.innerText = `Кол-во: ${item1}`
     tg.MainButton.setText("Купить!");
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 });
@@ -43,7 +43,7 @@ btn2.addEventListener("click", function () {
     item2 += 1;
     lable2.innerText = `Кол-во: ${item2}`
     tg.MainButton.setText("Купить!");
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 
@@ -53,7 +53,7 @@ btn3.addEventListener("click", function () {
     item3 += 1;
     lable3.innerText = `Кол-во: ${item3}`
     tg.MainButton.setText("Купить!");
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 
@@ -63,7 +63,7 @@ btn4.addEventListener("click", function () {
     item4 += 1;
     lable4.innerText = `Кол-во: ${item4}`
     tg.MainButton.setText("Купить!");
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 
@@ -73,7 +73,7 @@ btn5.addEventListener("click", function () {
     item5 += 1;
     lable5.innerText = `Кол-во: ${item5}`
     tg.MainButton.setText("Купить!");
-    if (tg.MainButton.hidden) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
 
@@ -144,7 +144,7 @@ min_btn6.addEventListener('click', function () {
     }
 })
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    items.push(["Свеч №1", item1, "Свеч №2", item2, "Свеч №3", item3, "Свеч №4", item4, "Свеч №5", item5, "Свеч №6", item6])
+    items.push([`Свеч №1 - ${item1}`, `Свеч №2 - ${item2}`, `Свеч №3 - ${item3}`, `Свеч №4 - ${item4}`, `Свеч №5 - ${item5}`, `Свеч №6 - ${item6}`,])
     items.push(`Общая сумма = ${item1 * 500 + item2 * 500 + item3 * 500 + item4 * 500 + item5 * 500 + item6 * 500}`);
     tg.sendData(items);
 });
