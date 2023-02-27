@@ -47,8 +47,74 @@ p {
 
 
 .disc1 {
-    background-color: black;
-    background-size: 200% 200%;
+    background-color: white;
+    color: black;
+    background-size: 200%;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 14px;
+    transform: translate(-50%, -50%);
+    transition: filter 0.5s linear;
+}
+
+.disc2 {
+    background-color: white;
+    color: black;
+    background-size: 200%;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 14px;
+    transform: translate(-50%, -50%);
+    transition: filter 0.5s linear;
+}
+
+.disc3 {
+    background-color: white;
+    color: black;
+    background-size: 200%;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 14px;
+    transform: translate(-50%, -50%);
+    transition: filter 0.5s linear;
+}
+
+.disc4 {
+    background-color: white;
+    color: black;
+    background-size: 200%;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 14px;
+    transform: translate(-50%, -50%);
+    transition: filter 0.5s linear;
+}
+
+.disc5 {
+    background-color: white;
+    color: black;
+    background-size: 200%;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 14px;
+    transform: translate(-50%, -50%);
+    transition: filter 0.5s linear;
+}
+
+.disc6 {
+    background-color: white;
+    color: black;
+    background-size: 200%;
     border-radius: 10px;
     position: absolute;
     top: 50%;
@@ -72,10 +138,10 @@ p {
     display: inline-block;
     padding: 3px 30px;
     border: none;
-    background: #00FA9A;
+    background: #63a369;
     border-radius: 10px;
     text-transform: uppercase;
-
+    color: white;
     font-size: 18px;
     transition: background .2s linear;
 }
@@ -88,7 +154,7 @@ p {
     border-radius: 10px;
     font-size: 18px;
     text-transform: uppercase;
-
+    color: white;
     transition: background .2s linear;
 }
 
