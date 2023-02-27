@@ -49,6 +49,11 @@ let img4 = document.getElementById("img4");
 let img5 = document.getElementById("img5");
 let img6 = document.getElementById("img6");
 let disc1 = document.getElementById("disc1")
+let disc2 = document.getElementById("disc2")
+let disc3 = document.getElementById("disc3")
+let disc4 = document.getElementById("disc4")
+let disc5 = document.getElementById("disc5")
+let disc6 = document.getElementById("disc6")
 function MainButtonShow(cost) {
     totalCost += cost;
     tg.MainButton.setText(`Купить! ${totalCost} ₽`)
@@ -59,16 +64,36 @@ function MainButtonShow(cost) {
         tg.MainButton.hide();
     }
 }
-img1.addEventListener("click", function (){
-    this.classList.toggle('blur');
-    disc1.classList.toggle('opacity')
-
-
-})
-function SetText(text, item, cost) {
-    text.innerText = `${item} шт / Цена ${cost}`;
+function blurOpacity(img, disc){
+    img.classList.toggle('blur');
+    disc.classList.toggle('opacity')
 }
-
+function SetText(text, item, cost) {
+    text.innerText = `${item} шт / ${cost} ₽`;
+}
+function countCheck(item){
+    if(item > 0){
+        return true
+    }
+}
+img1.addEventListener("click", function (){
+   blurOpacity(this, disc1)
+})
+img2.addEventListener("click", function (){
+    blurOpacity(this, disc2)
+})
+img3.addEventListener("click", function (){
+   blurOpacity(this, disc3)
+})
+img4.addEventListener("click", function (){
+    blurOpacity(this, disc4)
+})
+img5.addEventListener("click", function (){
+    blurOpacity(this, disc5)
+})
+img6.addEventListener("click", function (){
+    blurOpacity(this, disc6)
+})
 btn1.addEventListener("click", function () {
     item1 += 1;
     cost_item1 = first_candle_price * item1;
@@ -118,7 +143,7 @@ btn6.addEventListener("click", function () {
 });
 
 min_btn1.addEventListener('click', function () {
-    if (item1 >= 1) {
+    if (countCheck(item1)) {
         item1 -= 1;
         cost_item1 = first_candle_price * item1;
         SetText(lable1, item1, cost_item1);
@@ -127,7 +152,7 @@ min_btn1.addEventListener('click', function () {
 
 })
 min_btn2.addEventListener('click', function () {
-    if (item2 >= 1) {
+   if (countCheck(item2)) {
         item2 -= 1;
         cost_item2 = second_candle_price * item2;
         SetText(lable2, item2, cost_item2);
@@ -136,7 +161,7 @@ min_btn2.addEventListener('click', function () {
 
 })
 min_btn3.addEventListener('click', function () {
-    if (item3 >= 1) {
+   if (countCheck(item3) === true) {
         item3 -= 1;
         cost_item3 = third_candle_price * item3;
         SetText(lable3, item3, cost_item3);
@@ -145,7 +170,7 @@ min_btn3.addEventListener('click', function () {
 
 })
 min_btn4.addEventListener('click', function () {
-    if (item4 >= 1) {
+    if (countCheck(item4)) {
         item4 -= 1;
         cost_item4 = fourth_candle_price * item4;
         SetText(lable4, item4, cost_item4);
@@ -154,7 +179,7 @@ min_btn4.addEventListener('click', function () {
 
 })
 min_btn5.addEventListener('click', function () {
-    if (item5 >= 1) {
+    if (countCheck(item5)) {
         item5 -= 1;
         cost_item5 = fifth_candle_price * item5;
         SetText(lable5, item5, cost_item5);
@@ -163,7 +188,7 @@ min_btn5.addEventListener('click', function () {
 
 })
 min_btn6.addEventListener('click', function () {
-    if (item6 >= 1) {
+    if (countCheck(item6)) {
         item6 -= 1;
         cost_item6 = sixth_candle_price * item6;
         SetText(lable6, item6, cost_item6);
@@ -173,22 +198,22 @@ min_btn6.addEventListener('click', function () {
 })
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    if (item1 !== 0) {
+    if (countCheck(item1)) {
         items.push(`Свечей №1 - ${item1} шт.`)
     }
-    if (item2 !== 0) {
+    if (countCheck(item2)) {
         items.push(`Свечей №2 - ${item2} шт.`)
     }
-    if (item3 !== 0) {
+    if (countCheck(item3)) {
         items.push(`Свечей №3 - ${item3} шт.`)
     }
-    if (item4 !== 0) {
+    if (countCheck(item4)) {
         items.push(`Свечей №4 - ${item4} шт.`)
     }
-    if (item5 !== 0) {
+    if (countCheck(item5)) {
         items.push(`Свечей №5 - ${item5} шт.`)
     }
-    if (item6 !== 0) {
+    if (countCheck(item6)) {
         items.push(`Свечей №6 - ${item6} шт.`)
     }
 
