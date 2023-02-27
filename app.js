@@ -50,6 +50,9 @@ function MainButtonShow(cost) {
     if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
+    if (totalCost === 0){
+        tg.MainButton.hide();
+    }
 }
 
 function SetText(text, item, cost) {
@@ -161,22 +164,22 @@ min_btn6.addEventListener('click', function () {
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     if (item1 !== 0) {
-        items.push(`Свеч №1 - ${item1}`)
+        items.push(`Свеч №1 - ${item1} шт.`)
     }
     if (item2 !== 0) {
-        items.push(`Свеч №2 - ${item2}`)
+        items.push(`Свеч №2 - ${item2} шт.`)
     }
     if (item3 !== 0) {
-        items.push(`Свеч №3 - ${item3}`)
+        items.push(`Свеч №3 - ${item3} шт.`)
     }
     if (item4 !== 0) {
-        items.push(`Свеч №4 - ${item4}`)
+        items.push(`Свеч №4 - ${item4} шт.`)
     }
     if (item5 !== 0) {
-        items.push(`Свеч №5 - ${item5}`)
+        items.push(`Свеч №5 - ${item5} шт.`)
     }
     if (item6 !== 0) {
-        items.push(`Свеч №6 - ${item6}`)
+        items.push(`Свеч №6 - ${item6} шт.`)
     }
     items.push(`Общая сумма = ${totalCost}`);
     tg.sendData(items);
