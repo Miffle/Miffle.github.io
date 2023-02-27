@@ -162,15 +162,20 @@ min_btn6.addEventListener('click', function () {
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     if (item1 !== 0) {
         items.push(`Свеч №1 - ${item1}`)
-    } else if (item2 !== 0) {
-         items.push(`Свеч №2 - ${item2}`)
-    }else if(item3 !== 0){
-         items.push(`Свеч №3 - ${item3}`)
-    }else if(item4 !== 0){
-         items.push(`Свеч №4 - ${item4}`)
-    }else if(item5 !== 0){
+    }
+    if (item2 !== 0) {
+        items.push(`Свеч №2 - ${item2}`)
+    }
+    if (item3 !== 0) {
+        items.push(`Свеч №3 - ${item3}`)
+    }
+    if (item4 !== 0) {
+        items.push(`Свеч №4 - ${item4}`)
+    }
+    if (item5 !== 0) {
         items.push(`Свеч №5 - ${item5}`)
-    }else if(item6 !== 0){
+    }
+    if (item6 !== 0) {
         items.push(`Свеч №6 - ${item6}`)
     }
     items.push(`Общая сумма = ${totalCost}`);
