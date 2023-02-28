@@ -77,7 +77,10 @@ function countCheck(item){
     }
 }
 img1.addEventListener("click", function (){
-   blurOpacity(this, disc1)
+    blurOpacity(img1, disc1)
+})
+disc1.addEventListener("click", function (){
+   blurOpacity(img1, disc1)
 })
 img2.addEventListener("click", function (){
     blurOpacity(this, disc2)
