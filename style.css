@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-    max-width: 300px;
+    max-width: 390px;
 }
 
 .inner {
@@ -31,6 +31,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     position: center;
+    
 }
 
 p {
