@@ -66,10 +66,11 @@ p {
     border-radius: 10px;
     position: absolute;
     width: 300px;
-    top: 50%;
+    bottom: 0;
+    top: 70%;
     left: 50%;
     font-size: 14px;
-    transform: translate(-50%, 170%);
+    transform: translate(-50%, 0%);
     transition: filter 0.5s linear;
 }
 
