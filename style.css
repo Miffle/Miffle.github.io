@@ -5,7 +5,7 @@
     url('/fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
     url('/fonts/Montserrat-Thin.woff') format('woff'),
     url('/fonts/Montserrat-Thin.ttf') format('truetype');
-    font-weight: 100;
+
     font-style: normal;
 }
 
@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 18px;
+    font-weight: 100;
     color: var(--tg-theme-text-color);
     background: var(--tg-theme-bg-color);
     font-family: montseral-f, sans-serif;
@@ -151,6 +152,7 @@ p {
 }
 
 .candles_discription {
+    font-weight: 300;
     font-size: 14px;
     text-align: justify;
     padding-left: 5px;
