@@ -37,10 +37,6 @@ p {
     margin: 5px;
 }
 
-.discription {
-    font-size: 16px;
-}
-
 .blur {
     color: black;
     filter: blur(2px);
@@ -59,7 +55,23 @@ p {
     transition: filter 0.5s linear;
 
 }
+
 .disc1 {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    border-radius: 10px;
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+    margin-bottom: 5px;
+    top: auto;
+    left: 50%;
+
+    transform: translate(-50%, 0%);
+    transition: filter 0.5s linear;
+}
+
+.disc2 {
     background-color: rgba(255, 255, 255, 0.6);
     color: black;
     background-size: 200%;
@@ -67,76 +79,82 @@ p {
     position: absolute;
     width: 300px;
     bottom: 0;
-    top: 70%;
+    margin-bottom: 5px;
+    top: auto;
     left: 50%;
     font-size: 14px;
     transform: translate(-50%, 0%);
     transition: filter 0.5s linear;
 }
 
-.disc2 {
-    background-color: white;
-    color: black;
-    background-size: 200%;
-    border-radius: 10px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 14px;
-    transform: translate(-50%, -50%);
-    transition: filter 0.5s linear;
-}
-
 .disc3 {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     color: black;
     background-size: 200%;
     border-radius: 10px;
     position: absolute;
-    top: 50%;
+    width: 300px;
+    bottom: 0;
+    margin-bottom: 5px;
+    top: auto;
     left: 50%;
-    font-size: 14px;
-    transform: translate(-50%, -50%);
+
+    transform: translate(-50%, 0%);
     transition: filter 0.5s linear;
 }
 
 .disc4 {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     color: black;
     background-size: 200%;
     border-radius: 10px;
     position: absolute;
-    top: 50%;
+    width: 300px;
+    bottom: 0;
+    margin-bottom: 5px;
+    top: auto;
     left: 50%;
     font-size: 14px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     transition: filter 0.5s linear;
 }
 
 .disc5 {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     color: black;
     background-size: 200%;
     border-radius: 10px;
     position: absolute;
-    top: 50%;
+    width: 300px;
+    bottom: 0;
+    margin-bottom: 5px;
+    top: auto;
     left: 50%;
     font-size: 14px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     transition: filter 0.5s linear;
 }
 
 .disc6 {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     color: black;
-    background-size: 200%;
     border-radius: 10px;
     position: absolute;
-    top: 50%;
+    width: 300px;
+    bottom: 0;
+    margin-bottom: 5px;
+    top: auto;
     left: 50%;
     font-size: 14px;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     transition: filter 0.5s linear;
+}
+
+.candles_discription {
+    font-size: 14px;
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .opacity {
