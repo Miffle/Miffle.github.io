@@ -79,9 +79,7 @@ function countCheck(item){
 img1.addEventListener("click", function (){
     blurOpacity(img1, disc1)
 })
-disc1.addEventListener("click", function (){
-   blurOpacity(img1, disc1)
-})
+
 img2.addEventListener("click", function (){
     blurOpacity(this, disc2)
 })
@@ -96,6 +94,24 @@ img5.addEventListener("click", function (){
 })
 img6.addEventListener("click", function (){
     blurOpacity(this, disc6)
+})
+disc1.addEventListener("click", function (){
+   blurOpacity(img1, this)
+})
+disc2.addEventListener("click", function (){
+   blurOpacity(img2, this)
+})
+disc3.addEventListener("click", function (){
+   blurOpacity(img3, this)
+})
+disc4.addEventListener("click", function (){
+   blurOpacity(img4, this)
+})
+disc5.addEventListener("click", function (){
+   blurOpacity(img5, this)
+})
+disc6.addEventListener("click", function (){
+   blurOpacity(img6, this)
 })
 btn1.addEventListener("click", function () {
     item1 += 1;
