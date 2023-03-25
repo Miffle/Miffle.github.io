@@ -211,6 +211,5 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
 
 
     items.push(`Общая сумма = ${totalCost}`);
-    tg.HapticFeedback()
     tg.sendData(items)
 });
