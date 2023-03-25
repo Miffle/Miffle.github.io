@@ -17,44 +17,37 @@ let item2 = 0
 let item3 = 0
 let item4 = 0
 let item5 = 0
-let item6 = 0
 let cost_item1 = 0
 let cost_item2 = 0
 let cost_item3 = 0
 let cost_item4 = 0
 let cost_item5 = 0
-let cost_item6 = 0
 let totalCost = 0
 let btn1 = document.getElementById("btn1");
 let btn2 = document.getElementById("btn2");
 let btn3 = document.getElementById("btn3");
 let btn4 = document.getElementById("btn4");
 let btn5 = document.getElementById("btn5");
-let btn6 = document.getElementById("btn6");
 let min_btn1 = document.getElementById("min_btn1");
 let min_btn2 = document.getElementById("min_btn2");
 let min_btn3 = document.getElementById("min_btn3");
 let min_btn4 = document.getElementById("min_btn4");
 let min_btn5 = document.getElementById("min_btn5");
-let min_btn6 = document.getElementById("min_btn6");
 let label1 = document.getElementById("count1");
 let label2 = document.getElementById("count2");
 let label3 = document.getElementById("count3");
 let label4 = document.getElementById("count4");
 let label5 = document.getElementById("count5");
-let label6 = document.getElementById("count6");
 let img1 = document.getElementById("img1");
 let img2 = document.getElementById("img2");
 let img3 = document.getElementById("img3");
 let img4 = document.getElementById("img4");
 let img5 = document.getElementById("img5");
-let img6 = document.getElementById("img6");
 let disc1 = document.getElementById("disc1")
 let disc2 = document.getElementById("disc2")
 let disc3 = document.getElementById("disc3")
 let disc4 = document.getElementById("disc4")
 let disc5 = document.getElementById("disc5")
-let disc6 = document.getElementById("disc6")
 
 function MainButtonShow(cost) {
     totalCost += cost;
@@ -98,9 +91,6 @@ img4.addEventListener("click", function () {
 img5.addEventListener("click", function () {
     blurOpacity(this, disc5)
 })
-img6.addEventListener("click", function () {
-    blurOpacity(this, disc6)
-})
 disc1.addEventListener("click", function () {
     blurOpacity(img1, this)
 })
@@ -115,9 +105,6 @@ disc4.addEventListener("click", function () {
 })
 disc5.addEventListener("click", function () {
     blurOpacity(img5, this)
-})
-disc6.addEventListener("click", function () {
-    blurOpacity(img6, this)
 })
 btn1.addEventListener("click", function () {
     item1 += 1;
@@ -159,13 +146,6 @@ btn5.addEventListener("click", function () {
 
 });
 
-btn6.addEventListener("click", function () {
-    item6 += 1;
-    cost_item6 = sixth_candle_price * item6;
-    SetText(label6, item6, cost_item6);
-    MainButtonShow(sixth_candle_price);
-
-});
 min_btn1.addEventListener('click', function () {
     if (countCheck(item1)) {
         item1 -= 1;
@@ -211,15 +191,6 @@ min_btn5.addEventListener('click', function () {
     }
 
 })
-min_btn6.addEventListener('click', function () {
-    if (countCheck(item6)) {
-        item6 -= 1;
-        cost_item6 = sixth_candle_price * item6;
-        SetText(label6, item6, cost_item6);
-        MainButtonShow(sixth_candle_price * (-1));
-    }
-
-})
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     if (countCheck(item1)) {
@@ -237,9 +208,7 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
     if (countCheck(item5)) {
         items.push(`Свечей №5 - ${item5} шт.`)
     }
-    if (countCheck(item6)) {
-        items.push(`Свечей №6 - ${item6} шт.`)
-    }
+
 
     items.push(`Общая сумма = ${totalCost}`);
     tg.sendData(items)
