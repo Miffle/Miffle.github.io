@@ -57,14 +57,8 @@ function blurOpacity(img, disc) {
     disc.classList.toggle('opacity')
 }
 
-function SetText(text, item, cost) {
+function flowerpot_SetText(text, item, cost) {
     text.innerText = `${item} шт / ${cost}`;
-}
-
-function countCheck(item) {
-    if (item > 0) {
-        return true
-    }
 }
 
 flowerpot_img1.addEventListener("click", function () {
@@ -102,14 +96,14 @@ flowerpot_disc5.addEventListener("click", function () {
 flowerpot_btn1.addEventListener("click", function () {
     flowerpot_item1 += 1;
     flowerpot_cost_item1 = first_flowerpot_price * flowerpot_item1;
-    SetText(flowerpot_label1, flowerpot_item1, flowerpot_cost_item1);
+    flowerpot_SetText(flowerpot_label1, flowerpot_item1, flowerpot_cost_item1);
     MainButtonShow(first_flowerpot_price);
 });
 
 flowerpot_btn2.addEventListener("click", function () {
     flowerpot_item2 += 1;
     flowerpot_cost_item2 = second_flowerpot_price * flowerpot_item2;
-    SetText(flowerpot_label2, flowerpot_item2, flowerpot_cost_item2);
+    flowerpot_SetText(flowerpot_label2, flowerpot_item2, flowerpot_cost_item2);
     MainButtonShow(second_flowerpot_price);
 
 });
@@ -117,7 +111,7 @@ flowerpot_btn2.addEventListener("click", function () {
 flowerpot_btn3.addEventListener("click", function () {
     flowerpot_item3 += 1;
     flowerpot_cost_item3 = third_flowerpot_price * flowerpot_item3;
-    SetText(flowerpot_label3, flowerpot_item3, flowerpot_cost_item3);
+    flowerpot_SetText(flowerpot_label3, flowerpot_item3, flowerpot_cost_item3);
     MainButtonShow(third_flowerpot_price);
 
 });
@@ -125,7 +119,7 @@ flowerpot_btn3.addEventListener("click", function () {
 flowerpot_btn4.addEventListener("click", function () {
     flowerpot_item4 += 1;
     flowerpot_cost_item4 = fourth_flowerpot_price * flowerpot_item4;
-    SetText(flowerpot_label4, flowerpot_item4, flowerpot_cost_item4);
+    flowerpot_SetText(flowerpot_label4, flowerpot_item4, flowerpot_cost_item4);
     MainButtonShow(fourth_flowerpot_price);
 
 });
@@ -133,7 +127,7 @@ flowerpot_btn4.addEventListener("click", function () {
 flowerpot_btn5.addEventListener("click", function () {
     flowerpot_item5 += 1;
     flowerpot_cost_item5 = fifth_flowerpot_price * flowerpot_item5;
-    SetText(flowerpot_label5, flowerpot_item5, flowerpot_cost_item5);
+    flowerpot_SetText(flowerpot_label5, flowerpot_item5, flowerpot_cost_item5);
 
     MainButtonShow(fifth_flowerpot_price);
 
@@ -143,7 +137,7 @@ flowerpot_min_btn1.addEventListener('click', function () {
     if (countCheck(flowerpot_item1)) {
         flowerpot_item1 -= 1;
         flowerpot_cost_item1 = first_flowerpot_price * flowerpot_item1;
-        SetText(flowerpot_label1, flowerpot_item1, flowerpot_cost_item1);
+        flowerpot_SetText(flowerpot_label1, flowerpot_item1, flowerpot_cost_item1);
         MainButtonShow(first_flowerpot_price * (-1));
     }
 
@@ -152,7 +146,7 @@ flowerpot_min_btn2.addEventListener('click', function () {
     if (countCheck(flowerpot_item2)) {
         flowerpot_item2 -= 1;
         flowerpot_cost_item2 = second_flowerpot_price * flowerpot_item2;
-        SetText(flowerpot_label2, flowerpot_item2, flowerpot_cost_item2);
+        flowerpot_SetText(flowerpot_label2, flowerpot_item2, flowerpot_cost_item2);
         MainButtonShow(second_flowerpot_price * (-1));
     }
 
@@ -161,7 +155,7 @@ flowerpot_min_btn3.addEventListener('click', function () {
     if (countCheck(flowerpot_item3) === true) {
         flowerpot_item3 -= 1;
         flowerpot_cost_item3 = third_flowerpot_price * flowerpot_item3;
-        SetText(flowerpot_label3, flowerpot_item3, flowerpot_cost_item3);
+        flowerpot_SetText(flowerpot_label3, flowerpot_item3, flowerpot_cost_item3);
         MainButtonShow(third_flowerpot_price * (-1));
     }
 
@@ -170,7 +164,7 @@ flowerpot_min_btn4.addEventListener('click', function () {
     if (countCheck(flowerpot_item4)) {
         flowerpot_item4 -= 1;
         flowerpot_cost_item4 = fourth_flowerpot_price * flowerpot_item4;
-        SetText(flowerpot_label4, flowerpot_item4, flowerpot_cost_item4);
+        flowerpot_SetText(flowerpot_label4, flowerpot_item4, flowerpot_cost_item4);
         MainButtonShow(fourth_flowerpot_price * (-1));
     }
 
@@ -179,7 +173,7 @@ flowerpot_min_btn5.addEventListener('click', function () {
     if (countCheck(flowerpot_item5)) {
         flowerpot_item5 -= 1;
         flowerpot_cost_item5 = fifth_flowerpot_price * flowerpot_item5;
-        SetText(flowerpot_label5, flowerpot_item5, flowerpot_cost_item5);
+        flowerpot_SetText(flowerpot_label5, flowerpot_item5, flowerpot_cost_item5);
         MainButtonShow(fifth_flowerpot_price * (-1));
     }
 
