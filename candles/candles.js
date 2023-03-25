@@ -16,6 +16,26 @@ let labelIds = ["count1", "count2", "count3", "count4", "count5", "count6"];
 let imgIds = ["img1", "img2", "img3", "img4", "img5", "img6"];
 let discIds = ["disc1", "disc2", "disc3", "disc4", "disc5", "disc6"];
 
+Telegram.WebApp.onEvent("mainButtonClicked", function () {
+    if (countCheck(costItems[0])) {
+        items[0].push(`Кашпо №1 - ${costItems[0]} шт.`)
+    }
+    if (countCheck(costItems[1])) {
+        items[1].push(`Кашпо №2 - ${costItems[1]} шт.`)
+    }
+    if (countCheck(costItems[2])) {
+        items[2].push(`Кашпо №3 - ${costItems[2]} шт.`)
+    }
+    if (countCheck(costItems[3])) {
+        items[3].push(`Кашпо №4 - ${costItems[3]} шт.`)
+    }
+    if (countCheck(costItems[4])) {
+        items[4].push(`Кашпо №5 - ${costItems[4]} шт.`)
+    }
+    items[5].push(`Общая сумма = ${totalCost}`);
+    tg.sendData(items)
+});
+
 for (let i = 0; i < buttonIds.length; i++) {
     let button = document.getElementById(buttonIds[i]);
     let minButton = document.getElementById(minButtonIds[i]);
@@ -72,22 +92,3 @@ function toggleBlurAndOpacity(img, disc) {
     disc.classList.toggle("opacity");
 }
 
-Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    if (countCheck(costItems[0])) {
-        items[0].push(`Кашпо №1 - ${costItems[0]} шт.`)
-    }
-    if (countCheck(costItems[1])) {
-        items[1].push(`Кашпо №2 - ${costItems[1]} шт.`)
-    }
-    if (countCheck(costItems[2])) {
-        items[2].push(`Кашпо №3 - ${costItems[2]} шт.`)
-    }
-    if (countCheck(costItems[3])) {
-        items[3].push(`Кашпо №4 - ${costItems[3]} шт.`)
-    }
-    if (countCheck(costItems[4])) {
-        items[4].push(`Кашпо №5 - ${costItems[4]} шт.`)
-    }
-    items[5].push(`Общая сумма = ${totalCost}`);
-    tg.sendData(items)
-});
