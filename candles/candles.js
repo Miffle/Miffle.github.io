@@ -73,7 +73,7 @@ function blurOpacity(img, disc) {
 }
 
 function SetText(text, item, cost) {
-    text.innerText = `${item} шт / ${cost} ₽`;
+    text.innerText = `${item} шт / ${cost}`;
 }
 
 function countCheck(item) {
