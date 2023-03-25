@@ -4,7 +4,11 @@ tg.expand();
 
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
-
+function countCheck(item) {
+    if (item > 0) {
+        return true
+    }
+}
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     if (totalCost !== 0) {
         if (countCheck(item1)) {
