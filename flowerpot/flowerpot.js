@@ -209,6 +209,6 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
     }
 
     items.push(`Общая сумма = ${totalCost}`);
-    tg.HapticFeedback()
+    tg.HapticFeedback.impactOccurred("soft")
     tg.sendData(items)
 });
