@@ -34,5 +34,6 @@ p{
 }
 
 header {
+	width: 390px;
 	border: 1px solid black;
 }
