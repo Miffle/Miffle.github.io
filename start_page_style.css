@@ -34,6 +34,6 @@ p{
 }
 
 header {
-	width: 390px;
+	width: 100%;
 	border: 1px solid var(--tg-theme-text-color);
 }
