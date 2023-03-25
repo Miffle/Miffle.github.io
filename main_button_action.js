@@ -8,22 +8,22 @@ tg.MainButton.color = "#2cab37";
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     if (totalCost !== 0) {
         if (countCheck(item1)) {
-            items.push(`Свечей №1 - ${item1} шт.`)
+            candles_items.push(`Свечей №1 - ${item1} шт.`)
         }
         if (countCheck(item2)) {
-            items.push(`Свечей №2 - ${item2} шт.`)
+            candles_items.push(`Свечей №2 - ${item2} шт.`)
         }
         if (countCheck(item3)) {
-            items.push(`Свечей №3 - ${item3} шт.`)
+            candles_items.push(`Свечей №3 - ${item3} шт.`)
         }
         if (countCheck(item4)) {
-            items.push(`Свечей №4 - ${item4} шт.`)
+            candles_items.push(`Свечей №4 - ${item4} шт.`)
         }
         if (countCheck(item5)) {
-            items.push(`Свечей №5 - ${item5} шт.`)
+            candles_items.push(`Свечей №5 - ${item5} шт.`)
         }
-        items.push(`Общая сумма = ${totalCost}`)
-        tg.sendData(items)
+        candles_items.push(`Общая сумма = ${totalCost}`)
+        tg.sendData(candles_items)
     } else {
         if (countCheck(flowerpot_item1)) {
             flowerpot_items.push(`Кашпо №1 - ${flowerpot_item1} шт.`)
