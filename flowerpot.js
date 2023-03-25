@@ -184,24 +184,3 @@ flowerpot_min_btn5.addEventListener('click', function () {
     }
 
 })
-
-Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    if (countCheck(flowerpot_item1)) {
-        flowerpot_items.push(`Кашпо №1 - ${flowerpot_item1} шт.`)
-    }
-    if (countCheck(flowerpot_item2)) {
-        flowerpot_items.push(`Кашпо №2 - ${flowerpot_item2} шт.`)
-    }
-    if (countCheck(flowerpot_item3)) {
-        flowerpot_items.push(`Кашпо №3 - ${flowerpot_item3} шт.`)
-    }
-    if (countCheck(flowerpot_item4)) {
-        flowerpot_items.push(`Кашпо №4 - ${flowerpot_item4} шт.`)
-    }
-    if (countCheck(flowerpot_item5)) {
-        flowerpot_items.push(`Кашпо №5 - ${flowerpot_item5} шт.`)
-    }
-
-    flowerpot_items.push(`Общая сумма = ${flowerpot_totalCost}`);
-    tg.sendData(flowerpot_items)
-});
