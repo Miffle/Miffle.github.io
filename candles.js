@@ -1,10 +1,3 @@
-let tg = window.Telegram.WebApp;
-
-tg.expand();
-
-tg.MainButton.textColor = "#FFFFFF";
-tg.MainButton.color = "#2cab37";
-
 let first_candle_price = 500;
 let second_candle_price = 500;
 let third_candle_price = 500;
@@ -64,7 +57,7 @@ function blurOpacity(img, disc) {
     disc.classList.toggle('opacity')
 }
 
-function SetText(text, item, cost) {
+function Candle_SetText(text, item, cost) {
     text.innerText = `${item} шт / ${cost}`;
 }
 
@@ -108,14 +101,14 @@ disc5.addEventListener("click", function () {
 btn1.addEventListener("click", function () {
     item1 += 1;
     cost_item1 = first_candle_price * item1;
-    SetText(label1, item1, cost_item1);
+    Candle_SetText(label1, item1, cost_item1);
     MainButtonShow(first_candle_price);
 });
 
 btn2.addEventListener("click", function () {
     item2 += 1;
     cost_item2 = second_candle_price * item2;
-    SetText(label2, item2, cost_item2);
+    Candle_SetText(label2, item2, cost_item2);
     MainButtonShow(second_candle_price);
 
 });
@@ -123,7 +116,7 @@ btn2.addEventListener("click", function () {
 btn3.addEventListener("click", function () {
     item3 += 1;
     cost_item3 = third_candle_price * item3;
-    SetText(label3, item3, cost_item3);
+    Candle_SetText(label3, item3, cost_item3);
     MainButtonShow(third_candle_price);
 
 });
@@ -131,7 +124,7 @@ btn3.addEventListener("click", function () {
 btn4.addEventListener("click", function () {
     item4 += 1;
     cost_item4 = fourth_candle_price * item4;
-    SetText(label4, item4, cost_item4);
+    Candle_SetText(label4, item4, cost_item4);
     MainButtonShow(fourth_candle_price);
 
 });
@@ -139,7 +132,7 @@ btn4.addEventListener("click", function () {
 btn5.addEventListener("click", function () {
     item5 += 1;
     cost_item5 = fifth_candle_price * item5;
-    SetText(label5, item5, cost_item5);
+    Candle_SetText(label5, item5, cost_item5);
 
     MainButtonShow(fifth_candle_price);
 
@@ -149,7 +142,7 @@ min_btn1.addEventListener('click', function () {
     if (countCheck(item1)) {
         item1 -= 1;
         cost_item1 = first_candle_price * item1;
-        SetText(label1, item1, cost_item1);
+        Candle_SetText(label1, item1, cost_item1);
         MainButtonShow(first_candle_price * (-1));
     }
 
@@ -158,7 +151,7 @@ min_btn2.addEventListener('click', function () {
     if (countCheck(item2)) {
         item2 -= 1;
         cost_item2 = second_candle_price * item2;
-        SetText(label2, item2, cost_item2);
+        Candle_SetText(label2, item2, cost_item2);
         MainButtonShow(second_candle_price * (-1));
     }
 
@@ -167,7 +160,7 @@ min_btn3.addEventListener('click', function () {
     if (countCheck(item3) === true) {
         item3 -= 1;
         cost_item3 = third_candle_price * item3;
-        SetText(label3, item3, cost_item3);
+        Candle_SetText(label3, item3, cost_item3);
         MainButtonShow(third_candle_price * (-1));
     }
 
@@ -176,7 +169,7 @@ min_btn4.addEventListener('click', function () {
     if (countCheck(item4)) {
         item4 -= 1;
         cost_item4 = fourth_candle_price * item4;
-        SetText(label4, item4, cost_item4);
+        Candle_SetText(label4, item4, cost_item4);
         MainButtonShow(fourth_candle_price * (-1));
     }
 
@@ -185,10 +178,8 @@ min_btn5.addEventListener('click', function () {
     if (countCheck(item5)) {
         item5 -= 1;
         cost_item5 = fifth_candle_price * item5;
-        SetText(label5, item5, cost_item5);
+        Candle_SetText(label5, item5, cost_item5);
         MainButtonShow(fifth_candle_price * (-1));
     }
 
 })
-
-
