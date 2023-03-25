@@ -6,7 +6,7 @@ tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    if (totalCost !== 0){
+    if (totalCost !== 0) {
         if (countCheck(item1)) {
             items.push(`Свечей №1 - ${item1} шт.`)
         }
@@ -22,12 +22,12 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
         if (countCheck(item5)) {
             items.push(`Свечей №5 - ${item5} шт.`)
         }
-
-
-        items.push(`Общая сумма = ${totalCost}`);}
-    else{if (countCheck(flowerpot_item1)) {
-        flowerpot_items.push(`Кашпо №1 - ${flowerpot_item1} шт.`)
-    }
+        items.push(`Общая сумма = ${totalCost}`)
+        tg.sendData(items)
+    } else {
+        if (countCheck(flowerpot_item1)) {
+            flowerpot_items.push(`Кашпо №1 - ${flowerpot_item1} шт.`)
+        }
         if (countCheck(flowerpot_item2)) {
             flowerpot_items.push(`Кашпо №2 - ${flowerpot_item2} шт.`)
         }
@@ -42,6 +42,7 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
         }
 
         flowerpot_items.push(`Общая сумма = ${flowerpot_totalCost}`);
-        tg.sendData(flowerpot_items)}
-    tg.sendData(items)
+        tg.sendData(flowerpot_items)
+    }
+
 });
