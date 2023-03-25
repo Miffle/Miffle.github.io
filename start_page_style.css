@@ -37,5 +37,5 @@ p{
 
 header {
     width: 388px;
-    border: 1px solid black;
+    border: 1px solid var(--tg-theme-text-color);
 }
