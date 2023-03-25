@@ -1,6 +1,3 @@
-let tg = window.Telegram.WebApp;
-
-tg.expand();
 let candles = document.getElementById("candles")
 let flowerpot = document.getElementById("flowerpot")
 
