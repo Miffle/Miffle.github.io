@@ -10,7 +10,6 @@ let second_candle_price = 500;
 let third_candle_price = 500;
 let fourth_candle_price = 500;
 let fifth_candle_price = 500;
-let sixth_candle_price = 500;
 let items = [];
 let item1 = 0
 let item2 = 0
@@ -192,24 +191,4 @@ min_btn5.addEventListener('click', function () {
 
 })
 
-Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    if (countCheck(item1)) {
-        items.push(`Свечей №1 - ${item1} шт.`)
-    }
-    if (countCheck(item2)) {
-        items.push(`Свечей №2 - ${item2} шт.`)
-    }
-    if (countCheck(item3)) {
-        items.push(`Свечей №3 - ${item3} шт.`)
-    }
-    if (countCheck(item4)) {
-        items.push(`Свечей №4 - ${item4} шт.`)
-    }
-    if (countCheck(item5)) {
-        items.push(`Свечей №5 - ${item5} шт.`)
-    }
 
-
-    items.push(`Общая сумма = ${totalCost}`);
-    tg.sendData(items)
-});
