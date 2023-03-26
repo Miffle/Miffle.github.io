@@ -1,108 +1,38 @@
 let flowerpot_price = [500, 500, 500, 500, 500]
-let flowerpot_item = [0,0,0,0,0]
-let flowerpot_cost_item = [0,0,0,0,0]
+let flowerpot_item = [0, 0, 0, 0, 0]
+let flowerpot_cost_item = [0, 0, 0, 0, 0]
 let flowerpot_totalCost = 0
-let flowerpot_plus_btn = [document.getElementById("flowerpots_btn1"),
-    document.getElementById("flowerpots_btn2"),
-    document.getElementById("flowerpots_btn3"),
-    document.getElementById("flowerpots_btn4"),
-    document.getElementById("flowerpots_btn5")]
-let flowerpot_min_btn = [document.getElementById("flowerpots_min_btn1"),
-    document.getElementById("flowerpots_min_btn2"),
-    document.getElementById("flowerpots_min_btn3"),
-    document.getElementById("flowerpots_min_btn4"),
-    document.getElementById("flowerpots_min_btn5")]
-let flowerpot_label = [document.getElementById("flowerpots_count1"),
-    document.getElementById("flowerpots_count2"),
-    document.getElementById("flowerpots_count3"),
-    document.getElementById("flowerpots_count4"),
-    document.getElementById("flowerpots_count5")]
+let flowerpot_plus_btn_id = ["flowerpots_btn1", "flowerpots_btn2", "flowerpots_btn3", "flowerpots_btn4", "flowerpots_btn5"]
+const flowerpot_min_btn_id = ["flowerpots_min_btn1", "flowerpots_min_btn2", "flowerpots_min_btn3", "flowerpots_min_btn4", "flowerpots_min_btn5"]
+const flowerpot_label_id = ["flowerpots_count1", "flowerpots_count2", "flowerpots_count3", "flowerpots_count4", "flowerpots_count5"]
+const flowerpot_count = flowerpot_label_id.length
+let flowerpot_label = []
+let flowerpot_plus_btn = []
+let flowerpot_min_btn = []
 
-flowerpot_plus_btn[0].addEventListener("click", function () {
-    flowerpot_item[0] += 1;
-    flowerpot_cost_item[0] = flowerpot_price[0] * flowerpot_item[0];
-    SetText(flowerpot_label[0], flowerpot_item[0], flowerpot_cost_item[0]);
-    MainButtonShow(flowerpot_price[0]);
-});
+for (let i = 0; i < flowerpot_count; i++) {
+    flowerpot_label.push(document.getElementById(flowerpot_label_id[i]))
+    flowerpot_plus_btn.push(document.getElementById(flowerpot_plus_btn_id[i]))
+    flowerpot_min_btn.push(document.getElementById(flowerpot_min_btn_id[i]))
+}
+for (let j = 0; j <flowerpot_count; j++){
+    flowerpot_plus_btn[j].addEventListener("click", function () {
+        flowerpot_item[j] += 1;
+        flowerpot_cost_item[j] = flowerpot_price[j] * flowerpot_item[j];
+        SetText(flowerpot_label[j], flowerpot_item[j], flowerpot_cost_item[j]);
+        MainButtonShow(flowerpot_price[j]);
+    });
 
-flowerpot_plus_btn[1].addEventListener("click", function () {
-    flowerpot_item[1] += 1;
-    flowerpot_cost_item[1] = flowerpot_price[1] * flowerpot_item[1];
-    SetText(flowerpot_label[1], flowerpot_item[1], flowerpot_cost_item[1]);
-    MainButtonShow(flowerpot_price[1]);
+    flowerpot_min_btn[j].addEventListener('click', function () {
+        if (countCheck(flowerpot_item[j])) {
+            flowerpot_item[j] -= 1;
+            flowerpot_cost_item[j] = flowerpot_price[j] * flowerpot_item[j];
+            SetText(flowerpot_label[j], flowerpot_item[j], flowerpot_cost_item[j]);
+            MainButtonShow(flowerpot_price[j] * (-1));
+        }
+    });
+}
 
-});
-
-flowerpot_plus_btn[2].addEventListener("click", function () {
-    flowerpot_item[2] += 1;
-    flowerpot_cost_item[2] = flowerpot_price[2] * flowerpot_item[2];
-    SetText(flowerpot_label[2], flowerpot_item[2], flowerpot_cost_item[2]);
-    MainButtonShow(flowerpot_price[2]);
-
-});
-
-flowerpot_plus_btn[3].addEventListener("click", function () {
-    flowerpot_item[3] += 1;
-    flowerpot_cost_item[3] = flowerpot_price[3] * flowerpot_item[3];
-    SetText(flowerpot_label[3], flowerpot_item[3], flowerpot_cost_item[3]);
-    MainButtonShow(flowerpot_price[3]);
-
-});
-
-flowerpot_plus_btn[4].addEventListener("click", function () {
-    flowerpot_item[4] += 1;
-    flowerpot_cost_item[4] = flowerpot_price[4] * flowerpot_item[4];
-    SetText(flowerpot_label[4], flowerpot_item[4], flowerpot_cost_item[4]);
-
-    MainButtonShow(flowerpot_price[4]);
-
-});
-
-flowerpot_min_btn[0].addEventListener('click', function () {
-    if (countCheck(flowerpot_item[0])) {
-        flowerpot_item[0] -= 1;
-        flowerpot_cost_item[0] = flowerpot_price[0] * flowerpot_item[0];
-        SetText(flowerpot_label[0], flowerpot_item[0], flowerpot_cost_item[0]);
-        MainButtonShow(flowerpot_price[0] * (-1));
-    }
-
-})
-flowerpot_min_btn[1].addEventListener('click', function () {
-    if (countCheck(flowerpot_item[1])) {
-        flowerpot_item[1] -= 1;
-        flowerpot_cost_item[1] = flowerpot_price[1] * flowerpot_item[1];
-        SetText(flowerpot_label[1], flowerpot_item[1], flowerpot_cost_item[1]);
-        MainButtonShow(flowerpot_price[1] * (-1));
-    }
-
-})
-flowerpot_min_btn[2].addEventListener('click', function () {
-    if (countCheck(flowerpot_item[2]) === true) {
-        flowerpot_item[2] -= 1;
-        flowerpot_cost_item[2] = flowerpot_price[2] * flowerpot_item[2];
-        SetText(flowerpot_label[2], flowerpot_item[2], flowerpot_cost_item[2]);
-        MainButtonShow(flowerpot_price[2] * (-1));
-    }
-
-})
-flowerpot_min_btn[3].addEventListener('click', function () {
-    if (countCheck(flowerpot_item[3])) {
-        flowerpot_item[3] -= 1;
-        flowerpot_cost_item[3] = flowerpot_price[3] * flowerpot_item[3];
-        SetText(flowerpot_label[3], flowerpot_item[3], flowerpot_cost_item[3]);
-        MainButtonShow(flowerpot_price[3] * (-1));
-    }
-
-})
-flowerpot_min_btn[4].addEventListener('click', function () {
-    if (countCheck(flowerpot_item[4])) {
-        flowerpot_item[4] -= 1;
-        flowerpot_cost_item[4] = flowerpot_price[4] * flowerpot_item[4];
-        SetText(flowerpot_label[4], flowerpot_item[4], flowerpot_cost_item[4]);
-        MainButtonShow(flowerpot_price[4] * (-1));
-    }
-
-})
 function MainButtonShow(cost) {
     flowerpot_totalCost += cost;
     tg.MainButton.setText(`Купить! ${flowerpot_totalCost} ₽`)

@@ -14,34 +14,34 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
     let all_items = [];
     if (totalCost !== 0) {
         if (countCheck(candle_item[0])) {
-            all_items.push(`Свечей №1 - ${candle_item[0]} шт.`)
+            all_items.push(`Свечей "Грейпфрут" - ${candle_item[0]} шт.`)
         }
         if (countCheck(candle_item[1])) {
-            all_items.push(`Свечей №2 - ${candle_item[1]} шт.`)
+            all_items.push(`Свечей "Лето на виноградной плантации" - ${candle_item[1]} шт.`)
         }
         if (countCheck(candle_item[2])) {
-            all_items.push(`Свечей №3 - ${candle_item[2]} шт.`)
+            all_items.push(`Свечей "Уд & Ваниль" - ${candle_item[2]} шт.`)
         }
         if (countCheck(candle_item[3])) {
-            all_items.push(`Свечей №4 - ${candle_item[3]} шт.`)
+            all_items.push(`Свечей "Свежесть манго" - ${candle_item[3]} шт.`)
         }
         if (countCheck(candle_item[4])) {
-            all_items.push(`Свечей №5 - ${candle_item[4]} шт.`)
+            all_items.push(`Свечей "Космическая ностальгия" - ${candle_item[4]} шт.`)
         }
         if (countCheck(flowerpot_item[0])) {
-            all_items.push(`Кашпо №1 - ${flowerpot_item[0]} шт.`)
+            all_items.push(`Кашпо зеленого цвета - ${flowerpot_item[0]} шт.`)
         }
         if (countCheck(flowerpot_item[1])) {
-            all_items.push(`Кашпо №2 - ${flowerpot_item[1]} шт.`)
+            all_items.push(`Кашпо розового цвета - ${flowerpot_item[1]} шт.`)
         }
         if (countCheck(flowerpot_item[2])) {
-            all_items.push(`Кашпо №3 - ${flowerpot_item[2]} шт.`)
+            all_items.push(`Кашп фиолетового цвета" - ${flowerpot_item[2]} шт.`)
         }
         if (countCheck(flowerpot_item[3])) {
-            all_items.push(`Кашпо №4 - ${flowerpot_item[3]} шт.`)
+            all_items.push(`Кашпо черного цвета - ${flowerpot_item[3]} шт.`)
         }
         if (countCheck(flowerpot_item[4])) {
-            all_items.push(`Кашпо №5 - ${flowerpot_item[4]} шт.`)
+            all_items.push(`Кашпо желтого цвета - ${flowerpot_item[4]} шт.`)
         }
         all_items.push(`Общая сумма = ${totalCost}`)
         tg.sendData(all_items)
