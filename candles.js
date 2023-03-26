@@ -148,3 +148,13 @@ candle_min_btn[4].addEventListener('click', function () {
     }
 
 })
+function MainButtonShow(cost){
+    candle_totalCost += cost;
+    tg.MainButton.setText(`Купить! ${candle_totalCost} ₽`)
+    if (tg.MainButton.isVisible !== true) {
+        tg.MainButton.show();
+    }
+    if (candle_totalCost === 0) {
+        tg.MainButton.hide();
+    }
+}
