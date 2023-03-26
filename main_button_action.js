@@ -46,5 +46,4 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
         all_items.push(`Общая сумма = ${totalCost}`)
         tg.sendData(all_items)
     }
-
 });

@@ -27,7 +27,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 200px 200px;
-    padding: 15px 0 0 0;
+    column-width: auto;
+    padding-top: 15px;
 }
 p{
 	text-align: center;
