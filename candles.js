@@ -1,5 +1,4 @@
 let candle_prices = [500, 500, 500, 500, 500]
-let candles_items = [];
 let candle_item = [0,0,0,0,0]
 let candle_cost_item = [0,0,0,0,0]
 let candle_totalCost = 0

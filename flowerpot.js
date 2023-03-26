@@ -1,5 +1,4 @@
 let flowerpot_price = [500, 500, 500, 500, 500]
-let flowerpot_items = [];
 let flowerpot_item = [0,0,0,0,0]
 let flowerpot_cost_item = [0,0,0,0,0]
 let flowerpot_totalCost = 0
