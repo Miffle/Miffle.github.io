@@ -4,28 +4,6 @@ tg.expand();
 
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
-
-function MainButtonShow(cost, type) {
-    if (type === "candle") {
-        candle_totalCost += cost;
-        tg.MainButton.setText(`Купить! ${candle_totalCost} ₽`)
-        if (tg.MainButton.isVisible !== true) {
-            tg.MainButton.show();
-        }
-        if (candle_totalCost === 0) {
-            tg.MainButton.hide();
-        }
-    } else {
-        flowerpot_totalCost += cost;
-        tg.MainButton.setText(`Купить! ${flowerpot_totalCost} ₽`)
-        if (tg.MainButton.isVisible !== true) {
-            tg.MainButton.show();
-        }
-        if (candle_totalCost === 0) {
-            tg.MainButton.hide();
-        }
-    }
-}
 function countCheck(item) {
     if (item > 0) {
         return true
@@ -48,7 +26,7 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
         if (countCheck(candle_item[4])) {
             candles_items.push(`Свечей №5 - ${candle_item[4]} шт.`)
         }
-        candles_items.push(`Общая сумма = ${totalCost}`)
+        candles_items.push(`Общая сумма = ${candle_totalCost}`)
         candles_items.push(candle_item[0], candle_item[1], candle_item[2], candle_item[3], candle_item[4])
         tg.sendData(candles_items)
     } else {
