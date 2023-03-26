@@ -12,7 +12,7 @@ function countCheck(item) {
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     let totalCost = candle_totalCost + flowerpot_totalCost;
     let all_items = [];
-    if (candle_totalCost !== 0) {
+    if (totalCost !== 0) {
         if (countCheck(candle_item[0])) {
             all_items.push(`Свечей №1 - ${candle_item[0]} шт.`)
         }
@@ -45,5 +45,5 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
         }
         all_items.push(`Общая сумма = ${totalCost}`)
         tg.sendData(all_items)
-    }
+    } else {tg.showAlert("Корзина пуста. Чтобы что-то купить - надо что-то выбрать")}
 });

@@ -17,50 +17,6 @@ let flowerpot_label = [document.getElementById("flowerpots_count1"),
     document.getElementById("flowerpots_count3"),
     document.getElementById("flowerpots_count4"),
     document.getElementById("flowerpots_count5")]
-let flowerpot_img = [
-    document.getElementById("flowerpots_img1"),
-    document.getElementById("flowerpots_img2"),
-    document.getElementById("flowerpots_img3"),
-    document.getElementById("flowerpots_img4"),
-    document.getElementById("flowerpots_img5")]
-let flowerpot_disc = [
-    document.getElementById("flowerpots_disc1"),
-    document.getElementById("flowerpots_disc2"),
-    document.getElementById("flowerpots_disc3"),
-    document.getElementById("flowerpots_disc4"),
-    document.getElementById("flowerpots_disc5")]
-
-flowerpot_img[0].addEventListener("click", function () {
-    blurOpacity(this, flowerpot_disc[0])
-})
-
-flowerpot_img[1].addEventListener("click", function () {
-    blurOpacity(this, flowerpot_disc[1])
-})
-flowerpot_img[2].addEventListener("click", function () {
-    blurOpacity(this, flowerpot_disc[2])
-})
-flowerpot_img[3].addEventListener("click", function () {
-    blurOpacity(this, flowerpot_disc[3])
-})
-flowerpot_img[4].addEventListener("click", function () {
-    blurOpacity(this, flowerpot_disc[4])
-})
-flowerpot_disc[0].addEventListener("click", function () {
-    blurOpacity(flowerpot_img[0], this)
-})
-flowerpot_disc[1].addEventListener("click", function () {
-    blurOpacity(flowerpot_img[1], this)
-})
-flowerpot_disc[2].addEventListener("click", function () {
-    blurOpacity(flowerpot_img[2], this)
-})
-flowerpot_disc[3].addEventListener("click", function () {
-    blurOpacity(flowerpot_img[3], this)
-})
-flowerpot_disc[4].addEventListener("click", function () {
-    blurOpacity(flowerpot_img[4], this)
-})
 
 flowerpot_plus_btn[0].addEventListener("click", function () {
     flowerpot_item[0] += 1;
