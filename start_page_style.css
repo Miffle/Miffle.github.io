@@ -24,19 +24,26 @@ body {
 	
 }
 .start_page_inner {
-    text-align: center;
-	display: grid;
-    grid-column-gap: 35px;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 300px 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 200px;
     padding: 15px 0 0 0;
 }
 p{
 	text-align: center;
 	
 }
-
+.pics {
+    width: 180px;
+}
+#flowerpot{
+    text-align: center;
+}
+#candle {
+    text-align: center;
+}
 header {
     width: 388px;
-    border: 1px solid black;
+    padding-bottom: 10px;
+    border: 1px solid var(--tg-theme-text-color);
 }

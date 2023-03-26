@@ -44,7 +44,6 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
             all_items.push(`Кашпо №5 - ${flowerpot_item[4]} шт.`)
         }
         all_items.push(`Общая сумма = ${totalCost}`)
-        all_items.push(candle_item[0], candle_item[1], candle_item[2], candle_item[3], candle_item[4])
         tg.sendData(all_items)
     }
 
