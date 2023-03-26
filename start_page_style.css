@@ -43,7 +43,5 @@ p{
     text-align: center;
 }
 header {
-    width: 388px;
-    padding-bottom: 10px;
     border: 1px solid var(--tg-theme-text-color);
 }
