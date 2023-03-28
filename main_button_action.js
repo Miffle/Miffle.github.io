@@ -13,7 +13,7 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
 
     const candleNames = ["'Грейпфрут'", "'Лето на виноградной плантации'", "'Уд & Ваниль'", "'Свежесть манго'", "'Космическая ностальгия'"];
 
-    const flowerpotColors = ["зеленого", "розового", "фиолетового", "черного", "желтого"];
+    const flowerpotColors = ["Кашпо зеленого", "Кашпо розового", "Кашпо фиолетового", "Кашпо черного", "Кашпо желтого", "Поднос зеленого"];
 
     const candleQuantities = candle_item.filter(countCheck);
     const flowerpotQuantities = flowerpot_item.filter(countCheck);
@@ -23,7 +23,7 @@ Telegram.WebApp.onEvent("mainButtonClicked", function () {
     });
 
     flowerpotQuantities.forEach((quantity, index) => {
-        all_items.push(`Кашпо ${flowerpotColors[index]} цвета - ${quantity} шт.`);
+        all_items.push(` ${flowerpotColors[index]} цвета - ${quantity} шт.`);
     });
 
     if (totalCost !== 0) {
