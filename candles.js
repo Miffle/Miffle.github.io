@@ -30,7 +30,7 @@ for (let j = 0; j < candle_count; j++) {
             candle_item[j] -= 1;
             candle_cost_item[j] = candle_price[j] * candle_item[j];
             SetText(candle_label[j], candle_item[j], candle_cost_item[j]);
-            MainButtonShow(candle_price[j] * (-1));
+            MainButtonShow(candle_price[j] * (-1), "candle");
         }
     });
     candle_img[j].addEventListener('click', function () {
@@ -41,7 +41,7 @@ for (let j = 0; j < candle_count; j++) {
     })
 }
 
-function MainButtonShow(cost, type = "candle") {
+function MainButtonShow(cost, type) {
     if (type === "candle") {
         candle_totalCost += cost;
     } else {
@@ -51,7 +51,7 @@ function MainButtonShow(cost, type = "candle") {
     if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
-    if (candle_totalCost === 0) {
+    if ((candle_totalCost && flowerpot_totalCost) === 0) {
         tg.MainButton.hide();
     }
 }
