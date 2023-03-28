@@ -44,14 +44,23 @@ for (let j = 0; j < candle_count; j++) {
 function MainButtonShow(cost, type) {
     if (type === "candle") {
         candle_totalCost += cost;
+        tg.MainButton.setText(`Купить! ${candle_totalCost+flowerpot_totalCost} ₽`)
+        if (tg.MainButton.isVisible !== true) {
+            tg.MainButton.show();
+        }
+        if (candle_totalCost === 0) {
+            tg.MainButton.hide();
+        }
     } else {
         flowerpot_totalCost += cost;
+        tg.MainButton.setText(`Купить! ${candle_totalCost+flowerpot_totalCost} ₽`)
+        if (tg.MainButton.isVisible !== true) {
+            tg.MainButton.show();
+        }
+        if (flowerpot_totalCost === 0) {
+            tg.MainButton.hide();
+        }
     }
-    tg.MainButton.setText(`Купить! ${candle_totalCost+flowerpot_totalCost} ₽`)
-    if (tg.MainButton.isVisible !== true) {
-        tg.MainButton.show();
-    }
-    if ((candle_totalCost && flowerpot_totalCost) === 0) {
-        tg.MainButton.hide();
-    }
+
+
 }
