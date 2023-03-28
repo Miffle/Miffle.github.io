@@ -15,12 +15,11 @@
 .start_page_inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 200px;
+    grid-template-rows: 270px 200px;
     column-width: auto;
     padding-top: 15px;
     margin-left: 5px;
     margin-right: 5px;
-    align-items: center;
     justify-content: center;
 }
 p{
