@@ -9,23 +9,20 @@ tg.MainButton.color = "#2cab37";
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
     let totalCost = candle_totalCost + flowerpot_totalCost;
-    let all_items = [];
+    const candle_names = ["Свечей \"Грейпфрут\"", "Свечей \"Лето на виноградной плантации\"", "Свечей \"Уд & Ваниль\"", "Свечей \"Свежесть манго\"", "Свечей \"Космическая ностальгия\""]
+    const flowerpot_names = ["Кашпо зеленого цвета", "Кашпо розового цвета", "Кашпо фиолетового цвета", "Кашпо черного цвета", "Кашпо желтого цвета", "Поднос зеленого цвета"]
+    const all_items = []
 
-    const candleNames = ["'Грейпфрут'", "'Лето на виноградной плантации'", "'Уд & Ваниль'", "'Свежесть манго'", "'Космическая ностальгия'"];
-
-    const flowerpotColors = ["Кашпо зеленого", "Кашпо розового", "Кашпо фиолетового", "Кашпо черного", "Кашпо желтого", "Поднос зеленого"];
-
-    const candleQuantities = candle_item.filter(countCheck);
-    const flowerpotQuantities = flowerpot_item.filter(countCheck);
-
-    candleQuantities.forEach((quantity, index) => {
-        all_items.push(`Свечей ${candleNames[index]} - ${quantity} шт.`);
-    });
-
-    flowerpotQuantities.forEach((quantity, index) => {
-        all_items.push(` ${flowerpotColors[index]} цвета - ${quantity} шт.`);
-    });
-
+    for (let i = 0; i < candle_item.length; i++) {
+        if (countCheck(candle_item[i])) {
+            all_items.push(`${candle_names[i]} - ${candle_item[i]} шт.`)
+        }
+    }
+    for (let i = 0; i < flowerpot_item.length; i++) {
+        if (countCheck(flowerpot_item[i])) {
+            all_items.push(`${flowerpot_names[i]} - ${flowerpot_item[i]} шт.`)
+        }
+    }
     if (totalCost !== 0) {
         all_items.push(`Общая сумма = ${totalCost}`);
         tg.sendData(all_items)
