@@ -34,7 +34,7 @@ for (let j = 0; j < flowerpot_count; j++) {
 function MainButtonShow(cost) {
     flowerpot_totalCost += cost;
     tg.MainButton.setText(`Купить! ${flowerpot_totalCost} ₽`)
-    if (!tg.MainButton.isVisible) {
+    if (tg.MainButton.isVisible !== true) {
         tg.MainButton.show();
     }
     if (candle_totalCost === 0) {
