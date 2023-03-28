@@ -15,7 +15,7 @@
 .start_page_inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 167px 167px;
+    grid-template-rows: 200px 200px;
     column-width: auto;
     padding-top: 15px;
     margin: auto;
