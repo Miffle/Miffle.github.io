@@ -1,5 +1,5 @@
 let [flowerpot_price, flowerpot_item, flowerpot_cost_item] = [
-    [500, 500, 500, 500, 500, 500, 500, 500, 500, 500],
+    [150, 150, 150, 150, 150, 300, 300, 300, 300, 300],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
 const [flowerpot_plus_btn_id, flowerpot_min_btn_id, flowerpot_label_id] = [

@@ -1,4 +1,4 @@
-let candle_price = [500, 500, 500, 500, 500]
+let candle_price = [550, 550, 550, 550, 550]
 let candle_item = [0, 0, 0, 0, 0]
 let candle_cost_item = [0, 0, 0, 0, 0]
 let candle_totalCost = 0
