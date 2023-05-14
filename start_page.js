@@ -28,4 +28,5 @@ shopping_cart_btn.addEventListener('click', function (){
     candles_div.hidden = true;
     flowerpots_div.hidden = true;
     cart_div.hidden = false;
+    shopping_cart_btn.hidden = true;
 })
