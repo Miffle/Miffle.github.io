@@ -8,6 +8,15 @@
     <link rel="stylesheet" type="text/css" href="css/buttons.css">
     <link rel="stylesheet" type="text/css" href="css/cart.css">
     <title>Candles</title>
+    <script>
+        // Обработчик события beforeunload
+        window.addEventListener('beforeunload', function(e) {
+            // Отменяем событие, чтобы показать пользователю предупреждение
+            e.preventDefault();
+            // Устанавливаем сообщение, которое будет показано пользователю
+            e.returnValue = 'Вы уверены, что хотите покинуть Telegram? Все несохраненные данные будут потеряны.';
+        });
+    </script>
 </head>
 <body>
 <header id="header" hidden="hidden">
@@ -603,7 +612,7 @@
         <div class="cart_item" id="item16">
             <img src="source_files/green_flowerpot10.png" alt="flowerpot" class="cart_img">
             <div class="cart_title">
-                <label>Многоугольное кашпо зеленого цвета</label>
+                <label>Кашпо зеленого цвета</label>
                 <div>
                     <button class="min_btn" id="cart_flowerpots_min_btn6">-</button>
                     <label id="cart_flowerpots_count6">0 шт</label>
@@ -617,7 +626,7 @@
         <div class="cart_item" id="item17">
             <img src="source_files/pink_flowerpot10.png" alt="flowerpot" class="cart_img">
             <div class="cart_title">
-                <label>Многоугольное кашпо розового цвета</label>
+                <label>Кашпо розового цвета</label>
                 <div>
                     <button class="min_btn" id="cart_flowerpots_min_btn7">-</button>
                     <label id="cart_flowerpots_count7">0 шт</label>
@@ -631,7 +640,7 @@
         <div class="cart_item" id="item18">
             <img src="source_files/purple_flowerpot10.png" alt="flowerpot" class="cart_img">
             <div class="cart_title">
-                <label>Многоугольное кашпо фиолетового цвета</label>
+                <label>Кашпо фиолетового цвета</label>
                 <div>
                     <button class="min_btn" id="cart_flowerpots_min_btn8">-</button>
                     <label id="cart_flowerpots_count8">0 шт</label>
@@ -645,7 +654,7 @@
         <div class="cart_item" id="item19">
             <img src="source_files/black_flowerpot10.png" alt="flowerpot" class="cart_img">
             <div class="cart_title">
-                <label>Многоугольное кашпо черного цвета</label>
+                <label>Кашпо черного цвета</label>
                 <div>
                     <button class="min_btn" id="cart_flowerpots_min_btn9">-</button>
                     <label id="cart_flowerpots_count9">0 шт</label>
@@ -659,7 +668,7 @@
         <div class="cart_item" id="item20">
             <img src="source_files/yellow_flowerpot10.png" alt="flowerpot" class="cart_img">
             <div class="cart_title">
-                <label>Многоугольное кашпо желтого цвета</label>
+                <label>Кашпо желтого цвета</label>
                 <div>
                     <button class="min_btn" id="cart_flowerpots_min_btn10">-</button>
                     <label id="cart_flowerpots_count10">0 шт</label>
