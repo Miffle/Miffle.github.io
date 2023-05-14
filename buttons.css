@@ -1,6 +1,7 @@
 .shopping_cart_btn{
     position: sticky;
     background-color: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color);
     bottom: 0;
     border: 0;
     width: 100%;
