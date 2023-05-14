@@ -5,9 +5,9 @@
     left: 10%;
 }
 .cart_item{
-    display: grid;
     grid-template-columns: 100px 1fr;
     grid-template-rows: 1fr;
+    display: inline-block;
 }
 .cart_img{
     border-radius: 10px;
@@ -33,3 +33,64 @@
     display: flex;
     align-items: flex-end;
 }
+#item1{
+    display: none;
+}
+#item2{
+    display: none;
+}
+#item3{
+    display: none;
+}
+#item4{
+    display: none;
+}
+#item5{
+    display: none;
+}
+#item6{
+    display: none;
+}
+#item7{
+    display: none;
+}
+#item8{
+    display: none;
+}
+#item9{
+    display: none;
+}
+#item10{
+    display: none;
+}
+#item11{
+    display: none;
+}
+#item12{
+    display: none;
+}
+#item13{
+    display: none;
+}
+#item14{
+    display: none;
+}
+#item15{
+    display: none;
+}
+#item16{
+    display: none;
+}
+#item17{
+    display: none;
+}
+#item18{
+    display: none;
+}
+#item19{
+    display: none;
+}
+#item20{
+    display: none;
+}
+

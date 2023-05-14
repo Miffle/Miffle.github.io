@@ -33,5 +33,6 @@ shopping_cart_btn.addEventListener('click', function (){
     flowerpots_div.hidden = true;
     cart_div.hidden = false;
     shopping_cart_btn.hidden = true;
+    unhiding_in_cart();
     MainButtonShow();
 })
