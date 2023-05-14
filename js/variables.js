@@ -1,4 +1,4 @@
-window.tg.WebApp.enableClosingConfirmation();
+
 let [candle_price, candle_item, candle_cost_item] = [
     [550, 550, 550, 550, 550],
     [0, 0, 0, 0, 0],
