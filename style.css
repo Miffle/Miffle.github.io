@@ -1,10 +1,10 @@
 @font-face {
     font-family: montseral-f;
-    src: url('/fonts/Montserrat-Thin.eot');
+    src: url('fonts/Montserrat-Thin.eot');
     src: local('Montserrat Thin'), local('Montserrat-Thin'),
-    url('/fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/Montserrat-Thin.woff') format('woff'),
-    url('/fonts/Montserrat-Thin.ttf') format('truetype');
+    url('fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Montserrat-Thin.woff') format('woff'),
+    url('fonts/Montserrat-Thin.ttf') format('truetype');
     font-style: normal;
 }
 
@@ -21,6 +21,8 @@ body {
 
 .container {
     max-width: 390px;
+    left: 50%;
+    right: 50%;
 
 }
 .price_now {
@@ -38,7 +40,6 @@ body {
     text-align: center;
     display: grid;
     grid-template-columns: 1fr;
-    position: center;
 }
 
 p {
@@ -94,37 +95,7 @@ p {
     text-align: center;
 }
 
-.btn {
-    display: inline-block;
-    padding: 3px 30px;
-    border: none;
-    background: #63a369;
-    border-radius: 10px;
-    text-transform: uppercase;
-    color: white;
-    font-size: 18px;
-    transition: background .2s linear;
-}
 
-.min_btn {
-    display: inline-block;
-    padding: 3px 30px;
-    border: none;
-    background: #ea4e74;
-    border-radius: 10px;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: white;
-    transition: background .2s linear;
-}
-
-.min_btn:hover {
-    background: lightcoral;
-}
-
-.btn:hover {
-    background: lightgreen;
-}
 
 h2 {
     font-size: 18px;

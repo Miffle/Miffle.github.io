@@ -3,7 +3,8 @@ for (let j = 0; j < candle_count; j++) {
         candle_item[j] += 1;
         candle_cost_item[j] = candle_price[j] * candle_item[j];
         SetText(candle_label[j], candle_item[j], candle_cost_item[j]);
-        MainButtonShow(candle_price[j]);
+        // MainButtonShow(candle_price[j]);
+        CartButtonShow(candle_price[j]);
     });
 
     candle_min_btn[j].addEventListener('click', function () {
@@ -11,7 +12,8 @@ for (let j = 0; j < candle_count; j++) {
             candle_item[j] -= 1;
             candle_cost_item[j] = candle_price[j] * candle_item[j];
             SetText(candle_label[j], candle_item[j], candle_cost_item[j]);
-            MainButtonShow(candle_price[j] * (-1), "candle");
+            // MainButtonShow(candle_price[j] * (-1), "candle");
+            CartButtonShow(candle_price[j] * (-1), "candle");
         }
     });
     candle_img[j].addEventListener('click', function () {

@@ -33,3 +33,5 @@ const [flowerpot_label, flowerpot_plus_btn, flowerpot_min_btn] = [
     flowerpot_min_btn_id.map(id => document.getElementById(id))];
 const flowerpot_count = flowerpot_label_id.length;
 let flowerpot_totalCost = 0;
+
+const shopping_cart_btn = document.getElementById("shopping_cart_btn")

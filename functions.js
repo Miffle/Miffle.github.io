@@ -22,6 +22,15 @@ function MainButtonShow(cost, type) {
     }
 
 }
+function CartButtonShow(cost, type) {
+    total_cost_setting(cost, type)
+    if(shopping_cart_btn.hidden === true){
+        shopping_cart_btn.hidden = false;
+    }
+    if (candle_totalCost === 0 && flowerpot_totalCost === 0) {
+        shopping_cart_btn.hidden = true;
+    }
+}
 function total_cost_setting(cost, type) {
     if (type === "candle") {
         candle_totalCost += cost;
