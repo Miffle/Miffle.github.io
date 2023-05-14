@@ -1,0 +1,35 @@
+.cart_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 390px;
+    left: 10%;
+}
+.cart_item{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 1fr;
+}
+.cart_img{
+    border-radius: 10px;
+    max-width: 100px;
+    float: left;
+}
+.cart_title{
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: 10px;
+    text-align: left;
+    justify-content: space-around;
+}
+#cart_candles_btn1{
+    font-size: 14px;
+    transition: background .2s linear;
+}
+#cart_candles_min_btn1{
+    font-size: 14px;
+    transition: background .2s linear;
+}
+.cart_item_price1{
+    display: flex;
+    align-items: flex-end;
+}

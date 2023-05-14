@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="start_page_style.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="buttons.css">
+    <link rel="stylesheet" type="text/css" href="css/start_page_style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="css/cart.css">
     <title>Candles</title>
 </head>
 <body>
@@ -310,16 +311,33 @@
 </div>
 
 <div class="container" id="shopping_cart" hidden>
+    <div class="cart_container">
+        <div class="cart_item">
+            <img src="source_files/green_flowerpot.png" alt="flowerpot" class="cart_img">
+            <div class="cart_title">
+                <label>Кашпо зеленого цвета</label>
+                <div>
+                    <button class="min_btn" id="cart_candles_min_btn1">-</button>
+                    <label id="cart_candles_count1">0 шт / 0 ₽</label>
+                    <button class="btn" id="cart_candles_btn1">+</button>
+                </div>
+                <div class="cart_item_price1">
+                    <label>Цена: </label>
+                </div>
 
+            </div>
+
+        </div>
+    </div>
 </div>
 
 <button class="shopping_cart_btn" id="shopping_cart_btn" hidden>Корзина</button>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script async type="text/javascript" src="variables.js"></script>
-<script async type="text/javascript" src="functions.js"></script>
-<script async type="text/javascript" src="flowerpot.js"></script>
-<script async type="text/javascript" src="candles.js"></script>
-<script async type="text/javascript" src="main_button_action.js"></script>
-<script src="start_page.js"></script>
+<script async type="text/javascript" src="js/variables.js"></script>
+<script async type="text/javascript" src="js/functions.js"></script>
+<script async type="text/javascript" src="js/flowerpot.js"></script>
+<script async type="text/javascript" src="js/candles.js"></script>
+<script async type="text/javascript" src="js/main_button_action.js"></script>
+<script src="js/start_page.js"></script>
 </body>
 </html>
