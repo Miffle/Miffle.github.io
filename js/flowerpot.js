@@ -24,7 +24,6 @@ for (let j = 0; j < flowerpot_count; j++) {
         SetText(cart_flowerpot_label[j], flowerpot_item[j]);
         SetText(flowerpot_label[j], flowerpot_item[j]);
         SetCost(cart_flowerpot_cost[j], flowerpot_cost_item[j]);
-        CartButtonShow(flowerpot_price[j], "flowerpot");
     });
 
     cart_flowerpot_min_btn[j].addEventListener('click', function () {
@@ -34,7 +33,6 @@ for (let j = 0; j < flowerpot_count; j++) {
             SetText(cart_flowerpot_label[j], flowerpot_item[j]);
             SetText(flowerpot_label[j], flowerpot_item[j]);
             SetCost(cart_flowerpot_cost[j], flowerpot_cost_item[j]);
-            CartButtonShow(flowerpot_price[j] * (-1), "flowerpot");
         }
     });
 }
