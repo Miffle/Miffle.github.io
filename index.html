@@ -9,13 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/cart.css">
     <title>Candles</title>
     <script>
-        // Обработчик события beforeunload
-        window.addEventListener('beforeunload', function(e) {
-            // Отменяем событие, чтобы показать пользователю предупреждение
-            e.preventDefault();
-            // Устанавливаем сообщение, которое будет показано пользователю
-            e.returnValue = 'Вы уверены, что хотите покинуть Telegram? Все несохраненные данные будут потеряны.';
-        });
+        tg.enableClosingConfirmation()
     </script>
 </head>
 <body>
