@@ -5,8 +5,10 @@
     left: 10%;
 }
 .cart_item{
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: 1fr;
+    hyphens: manual;
+    grid-template-columns: 100px 290px;
+    grid-auto-rows: auto;
+    grid-row-gap: 10px;
     display: inline-block;
 }
 .cart_img{
