@@ -1,7 +1,9 @@
-function SetText(text, item, cost) {
-    text.innerText = `${item} шт / ${cost} ₽`;
+function SetText(text, item) {
+    text.innerText = `${item} шт`;
 }
-
+function SetCost(text, cost) {
+    text.innerText = `Цена: ${cost}₽`
+}
 function blurOpacity(img, disc) {
     img.classList.toggle('blur');
     disc.classList.toggle('opacity')
