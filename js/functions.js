@@ -35,5 +35,5 @@ function total_cost_setting(cost, type) {
     } else {
         flowerpot_totalCost += cost;
     }
-
+    tg.MainButton.setText(`Купить! ${candle_totalCost + flowerpot_totalCost} ₽`)
 }
