@@ -27,16 +27,24 @@ body{
 }
 a{
     color: white;
+    text-decoration: none
 }
 ol{
     display: flex;
+    flex-wrap: wrap;
+    width: 98vw;
+    padding: 0;
+
 }
 li{
+    margin-top: 1vw;
+    font-size: xxx-large;
     margin-right: 1vw;
     list-style-type: none;
     background-color: #983b45;
     border-radius: 10px;
-    width: 2vw;
+    width: 6vw;
+
     text-align: center;
 }
 h3, p {
