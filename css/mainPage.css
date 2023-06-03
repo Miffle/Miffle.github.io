@@ -8,7 +8,7 @@
     font-style: normal;
 }
 body{
-    font-size: 18px;
+    font-size: 24px;
     font-family: montseral-f, sans-serif;
     font-variant: small-caps;
     font-weight: 500;
@@ -49,4 +49,14 @@ li{
 }
 h3, p {
     margin: 1vw;
+}
+.btn-up{
+    position: fixed;
+    cursor: pointer;
+    bottom: 2vh;
+    right: 10px;
+    width: 100px;
+}
+.btn-up_hide {
+    display: none;
 }
