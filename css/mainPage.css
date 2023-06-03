@@ -1,0 +1,44 @@
+@font-face {
+    font-family: montseral-f;
+    src: url('../fonts/Montserrat-Thin.eot');
+    src: local('Montserrat Thin'), local('Montserrat-Thin'),
+    url('../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Thin.woff') format('woff'),
+    url('../fonts/Montserrat-Thin.ttf') format('truetype');
+    font-style: normal;
+}
+body{
+    font-size: 18px;
+    font-family: montseral-f, sans-serif;
+    font-variant: small-caps;
+    font-weight: 500;
+    background-color: #222021;
+}
+.container>div{
+    background-color: #983b45;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    color: white;
+    border-radius: 10px;
+    width: 50vw;
+}
+.content{
+    color: white;
+}
+a{
+    color: white;
+}
+ol{
+    display: flex;
+}
+li{
+    margin-right: 1vw;
+    list-style-type: none;
+    background-color: #983b45;
+    border-radius: 10px;
+    width: 2vw;
+    text-align: center;
+}
+h3, p {
+    margin: 1vw;
+}
