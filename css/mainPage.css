@@ -14,6 +14,10 @@ body{
     font-weight: 500;
     background-color: #222021;
 }
+.container{
+    color: white;
+    margin-top: 15vh;
+}
 .container>div{
     background-color: #983b45;
     margin-bottom: 1vh;
@@ -37,15 +41,13 @@ ol{
 
 }
 li{
-    margin-top: 1vw;
+    margin-top: 2vw;
     font-size: xxx-large;
-    margin-right: 1vw;
     list-style-type: none;
     background-color: #983b45;
     border-radius: 10px;
-    width: 6vw;
-
-    text-align: center;
+    text-align: justify;
+    width: 98vw;
 }
 h3, p {
     margin: 1vw;
@@ -59,4 +61,7 @@ h3, p {
 }
 .btn-up_hide {
     display: none;
+}
+.pic3{
+    width: 96vw;
 }
