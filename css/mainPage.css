@@ -7,27 +7,31 @@
 /*    url('../fonts/Montserrat-Thin.ttf') format('truetype');*/
 /*    font-style: normal;*/
 /*}*/
+
 @font-face {
-    font-family: Ammys;
-    src: url('../fonts/n1.ttf');
-    /*src: local('Montserrat Thin'), local('Montserrat-Thin'),*/
-    /*url('../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),*/
-    /*url('../fonts/Montserrat-Thin.woff') format('woff'),*/
-    /*url('../fonts/Montserrat-Thin.ttf') format('truetype');*/
+    font-family: 'Baskerville Cyrillic';
+    src: local('Baskerville Cyrillic Bold'), local('Baskerville-Cyrillic-Bold'),
+    url('../fonts/BaskervilleCyrLTStd-Upright.woff2') format('woff2'),
+    url('../fonts/BaskervilleCyrLTStd-Upright.woff') format('woff'),
+    url('../fonts/BaskervilleCyrLTStd-Upright.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
 }
-body{
+
+body {
     font-size: 24px;
-    font-family: Ammys, sans-serif;
+    font-family: Baskerville Cyrillic, sans-serif;
     font-variant: small-caps;
     font-weight: 500;
     background-color: #222021;
 }
-.container{
+
+.container {
     color: white;
     margin-top: 15vh;
 }
-.container>div{
+
+.container > div {
     background-color: #983b45;
     margin-bottom: 1vh;
     margin-top: 1vh;
@@ -35,21 +39,25 @@ body{
     border-radius: 10px;
     width: 98vw;
 }
-.content{
+
+.content {
     color: white;
 }
-a{
+
+a {
     color: white;
     text-decoration: none
 }
-ol{
+
+ol {
     display: flex;
     flex-wrap: wrap;
     width: 98vw;
     padding: 0;
 
 }
-li{
+
+li {
     margin-top: 2vw;
     font-size: xxx-large;
     list-style-type: none;
@@ -59,10 +67,12 @@ li{
     padding-left: 1vw;
     padding-right: 1vw;
 }
+
 h3, p {
     margin: 1vw;
 }
-.btn-up{
+
+.btn-up {
     position: fixed;
     cursor: pointer;
     bottom: 2vh;
@@ -73,12 +83,15 @@ h3, p {
     -o-transition: all 0.3s ease;;
     transition: all 0.3s ease;
 }
+
 .btn-up_hide {
     display: none;
 }
-.pic3{
+
+.pic3 {
     width: 96vw;
 }
-.btn-up:hover{
+
+.btn-up:hover {
     transform: translateY(-10px) rotateZ(360deg);
 }
