@@ -1,20 +1,10 @@
-/*@font-face {*/
-/*    font-family: montseral-f;*/
-/*    src: url('../fonts/Montserrat-Thin.eot');*/
-/*    src: local('Montserrat Thin'), local('Montserrat-Thin'),*/
-/*    url('../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),*/
-/*    url('../fonts/Montserrat-Thin.woff') format('woff'),*/
-/*    url('../fonts/Montserrat-Thin.ttf') format('truetype');*/
-/*    font-style: normal;*/
-/*}*/
-
 @font-face {
-    font-family: 'Baskerville Cyrillic';
-    src: local('Baskerville Cyrillic Bold'), local('Baskerville-Cyrillic-Bold'),
-    url('../fonts/BaskervilleCyrLTStd-Upright.woff2') format('woff2'),
-    url('../fonts/BaskervilleCyrLTStd-Upright.woff') format('woff'),
-    url('../fonts/BaskervilleCyrLTStd-Upright.ttf') format('truetype');
-    font-weight: 700;
+    font-family: montseral-f;
+    src: url('../fonts/Montserrat-Thin.eot');
+    src: local('Montserrat Thin'), local('Montserrat-Thin'),
+    url('../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Thin.woff') format('woff'),
+    url('../fonts/Montserrat-Thin.ttf') format('truetype');
     font-style: normal;
 }
 
