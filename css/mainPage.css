@@ -1,12 +1,12 @@
-/*@font-face {*/
-/*    font-family: montseral-f;*/
-/*    src: url('../fonts/Montserrat-Thin.eot');*/
-/*    src: local('Montserrat Thin'), local('Montserrat-Thin'),*/
-/*    url('../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),*/
-/*    url('../fonts/Montserrat-Thin.woff') format('woff'),*/
-/*    url('../fonts/Montserrat-Thin.ttf') format('truetype');*/
-/*    font-style: normal;*/
-/*}*/
+@font-face {
+    font-family: montseral-f;
+    src: url('../fonts/Montserrat-Thin.eot');
+    src: local('Montserrat Thin'), local('Montserrat-Thin'),
+    url('../fonts/Montserrat-Thin.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Montserrat-Thin.woff') format('woff'),
+    url('../fonts/Montserrat-Thin.ttf') format('truetype');
+    font-style: normal;
+}
 @font-face {
     font-family: NotoSansSC;
     src: url('../fonts/NotoSansSC-Thin.otf');
@@ -14,7 +14,7 @@
 }
 body {
     font-size: 24px;
-    font-family: NotoSansSC, sans-serif;
+    font-family: NotoSansSC, montseral-f, sans-serif;
     font-variant: small-caps;
     font-weight: 100;
     background-color: #222021;
