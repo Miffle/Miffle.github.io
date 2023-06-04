@@ -48,6 +48,8 @@ li{
     border-radius: 10px;
     text-align: justify;
     width: 98vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 h3, p {
     margin: 1vw;
@@ -58,10 +60,17 @@ h3, p {
     bottom: 2vh;
     right: 10px;
     width: 100px;
+    -webkit-transition: all 0.3s ease;;
+    -moz-transition: all 0.3s ease;;
+    -o-transition: all 0.3s ease;;
+    transition: all 0.3s ease;
 }
 .btn-up_hide {
     display: none;
 }
 .pic3{
     width: 96vw;
+}
+.btn-up:hover{
+    transform: translateY(-10px) rotateZ(360deg);
 }
